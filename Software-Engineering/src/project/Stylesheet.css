@@ -1,0 +1,154 @@
+/* The left side-bar */
+.side-bar{
+    -fx-background-color: #0A4480
+}
+
+/* Make round conner components */
+.border {
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+}
+.button-image {
+    -fx-max-height: 100;
+    -fx-max-width: 160;
+    -fx-border-width: 5px;
+    -fx-font-family: 'Inter', monospace;
+    -fx-background-color: Transparent;
+    -fx-border-color: Transparent;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+.button-image:hover{
+    -fx-background-color: rgba(217, 217, 217, 0.22);
+}
+/*.button-image:focused{*/
+/*    -fx-border-color: #58C063;*/
+/*    -fx-border-width: 5px;*/
+/*    -fx-border-radius: 25;*/
+/*}*/
+/*.button-image:pressed{*/
+/*    -fx-border-color: #58C063;*/
+/*    -fx-border-width: 5px;*/
+/*    -fx-border-radius: 25;*/
+/*}*/
+.button-text {
+    -fx-background-color: transparent;
+}
+.button-text:hover {
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+}
+.button-text:pressed {
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+    -fx-text-fill: blue;
+}
+
+/* buttons on left side-bar */
+.button-sidebar {
+    -fx-font-family: 'Inter', monospace;
+    -fx-background-color: Transparent;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+/* buttons hover */
+.button-sidebar:hover {
+    -fx-background-color: #0457AE;
+    -fx-border-width: 0px 0px 0px 2px;
+    -fx-cursor: hand;
+    /*-fx-border-color: #043988;*/
+}
+.button-sidebar:pressed {
+    -fx-border-color: #4784f5;
+    -fx-border-width: 0px 0px 0px 6px;
+}
+.imageView {
+    -fx-background-color: #FFFFFF;
+}
+
+.imageView:hover {
+    -fx-background-color: #0457AE;
+}
+
+/* tool bar */
+.tool-bar {
+    -fx-background-color: #1259A3;
+}
+
+.buttonInvisible {
+    -fx-background-color: Transparent;
+    -fx-border-color: none !important;
+    -fx-font-size:0;
+}
+
+.radio-button {
+    -fx-border-radius: 20;
+    -fx-border-color: #000000;
+    -fx-border-width: 2;
+    -fx-padding: 10, 0, 10, 0;
+}
+
+.title-text {
+    -fx-font-family: 'Inter', monospace;
+    -fx-background-color: Transparent;
+    -fx-font-size: 20;
+}
+
+.normal-text {
+    -fx-font-family: 'Inter', monospace;
+    -fx-background-color: Transparent;
+    -fx-font-size: 16px;
+}
+
+.scroll-pane{
+    -fx-background-color:  linear-gradient(to right, #CF6F6F, #CF6F6F);
+}
+
+/*.button-bill {*/
+/*    transform: scale(0.98);*/
+/*    !* Scaling button to 0.98 to its original size *!*/
+/*    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);*/
+/*    !* Lowering the shadow *!*/
+/*}*/
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: white;
+    -fx-background-radius: 5em;
+}
+.scroll-pane > .corner {
+    -fx-background-color: black;
+}
+
+.transparent {
+    -fx-background-color: rgba(0, 0, 0, 0);
+}
+
+.body-background {
+    -fx-background-color: #F4F4F4;
+}
+
+/*.button-bill:active {*/
+/*    transform: scale(0.98);*/
+/*    !* Scaling button to 0.98 to its original size *!*/
+/*    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);*/
+/*    !* Lowering the shadow *!*/
+/*}*/

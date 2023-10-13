@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.lang.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="227.0" style="-fx-background-color: #FDCBCB;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controllers.HoaDonDetailController">
+   <children>
+      <VBox alignment="CENTER" layoutX="2.0" layoutY="5.0" spacing="7.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="idHoaDon" alignment="CENTER" prefHeight="21.0" prefWidth="207.0" text="Hóa Đơn 1" textFill="#514141">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="tenKhachLabel" alignment="CENTER" layoutX="28.0" layoutY="379.0" prefHeight="16.0" prefWidth="192.0" text="Khách hàng: ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="soOrderLabel" alignment="CENTER" layoutX="28.0" layoutY="79.0" prefHeight="16.0" prefWidth="192.0" text="Số order: ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="282.0" prefWidth="200.0" stylesheets="@../Stylesheet.css">
+               <content>
+                  <AnchorPane fx:id="billPane" minHeight="0.0" minWidth="0.0" prefHeight="287.0" prefWidth="227.0" style="-fx-background-color: FDCBCB;" stylesheets="@../Stylesheet.css">
+                     <styleClass>
+                        <String fx:value="scroll-pane" />
+                        <String fx:value="scroll-bar" />
+                        <String fx:value="decrement-button" />
+                        <String fx:value="increment-button" />
+                        <String fx:value="track" />
+                     </styleClass>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <Label fx:id="timeStampLabel" alignment="CENTER" prefHeight="10.0" prefWidth="192.0" text="Thời gian chờ: ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="70.0" prefWidth="198.0">
+               <children>
+                  <Button fx:id="billCancelButton" mnemonicParsing="false" onAction="#setBillCancelButton" prefHeight="58.0" prefWidth="83.0" style="-fx-background-radius: 15;" styleClass="buttonInvisible" stylesheets="@../Stylesheet.css" textFill="#2fd419">
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/image/icons/delete_hoadon.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="billDoneButton" mnemonicParsing="false" onAction="#setBillDoneButton" prefHeight="58.0" prefWidth="83.0" styleClass="buttonInvisible" stylesheets="@../Stylesheet.css" textFill="#2fd419">
+                     <graphic>
+                        <ImageView fitHeight="62.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/image/icons/White_check_mark_in_dark_green_rounded_square.svg.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

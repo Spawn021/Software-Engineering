@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="mainEditTopping" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="824.0" stylesheets="@../Stylesheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controllers.ChinhSuaToppingController">
+   <children>
+      <VBox layoutX="200.0" layoutY="60.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane prefHeight="357.0" prefWidth="1000.0" vgap="10.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="94.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="155.0" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="148.0" minHeight="10.0" prefHeight="130.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="backBtn" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="&lt; Back">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Chỉnh sửa topping" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Text>
+                  <VBox alignment="CENTER_LEFT" GridPane.rowIndex="1">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tên đồ uống/topping" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Text>
+                        <TextField fx:id="ten" promptText="nhập tên chỉnh sửa" style="-fx-background-color: #C4C4C4;" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <Pane prefHeight="83.0" prefWidth="334.0" GridPane.rowIndex="2">
+                     <children>
+                        <Pane layoutX="6.0" layoutY="30.0">
+                           <children>
+                              <Pane fx:id="paneGiaTopping" layoutY="33.0">
+                                 <children>
+                                    <Text layoutX="14.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="giaTopping" layoutX="14.0" layoutY="33.0" promptText="nhập giá chỉnh sửa">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Pane GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <children>
+                        <Circle fx:id="anhDoUongTopping" fill="DODGERBLUE" layoutX="31.0" layoutY="58.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Button fx:id="imageBtn" blendMode="DARKEN" layoutX="-69.0" layoutY="-42.0" mnemonicParsing="false" onAction="#uploadImageBtn" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                     </children>
+                  </Pane>
+                  <Pane GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nguyên liệu">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="15.0" />
+               </VBox.margin>
+            </Text>
+            <ScrollPane prefHeight="74.0" prefWidth="774.0">
+               <content>
+                  <HBox fx:id="hBoxNguyenLieu" alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="1321.0" spacing="10.0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></HBox>
+               </content>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </ScrollPane>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </VBox>
+      <Button layoutX="632.0" layoutY="508.0" mnemonicParsing="false" onAction="#apDungBtn" style="-fx-background-color: #C4C4C4;" text="Áp dụng" AnchorPane.bottomAnchor="113.0" AnchorPane.rightAnchor="49.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Button>
+      <Button layoutX="49.0" layoutY="516.0" mnemonicParsing="false" onAction="#xoaBtn" prefHeight="33.0" prefWidth="75.0" style="-fx-background-color: #D73838;" text="Xóa" textFill="WHITE" visible="false" />
+   </children>
+</AnchorPane>

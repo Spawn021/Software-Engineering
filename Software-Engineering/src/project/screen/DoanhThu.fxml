@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeView?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+<AnchorPane id="AnchorPane" fx:id="mainDoanhthu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="824.0" stylesheets="@../Stylesheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controllers.DoanhThuController">
+   <children>
+      <HBox layoutX="-7.0" prefHeight="691.0" prefWidth="1052.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox layoutX="202.0" layoutY="10.0" prefHeight="540.0" prefWidth="835.0">
+               <children>
+                  <HBox prefHeight="193.0" prefWidth="815.0" style="-fx-background-color: #E2DFDF;">
+                     <children>
+                        <Pane prefHeight="127.0" prefWidth="248.0" style="-fx-background-color: linear-gradient(to right, #8A8AF9, #8080F6); -fx-background-radius: 25;" styleClass="border">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <children>
+                              <Label alignment="TOP_LEFT" layoutX="22.0" layoutY="14.0" text="Doanh thu tháng">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="monthSumLabel" layoutX="22.0" layoutY="50.0" text="\$1870.25" />
+                              <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="104.0" spacing="5.0">
+                                 <children>
+                                    <ImageView fx:id="monthImage" fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/image/icons/decrease.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="monthComparisionLabel" text="No data" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="139.0" prefWidth="265.0" style="-fx-background-color: linear-gradient(to right, #B878FE, #AC65EF); -fx-background-radius: 25;" styleClass="border">
+                           <HBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </HBox.margin>
+                           <children>
+                              <Label alignment="CENTER" layoutX="28.0" layoutY="14.0" text="Doanh thu ngày">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="daySumLabel" layoutX="28.0" layoutY="50.0" text="\$370" />
+                              <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="104.0" spacing="5.0">
+                                 <children>
+                                    <ImageView fx:id="dayImage" fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/image/icons/increase.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="dayComparisionLabel" text="No data" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="139.0" prefWidth="250.0" style="-fx-background-color: linear-gradient(to right, #E3C43E, #DABD3D); -fx-background-radius: 25;" styleClass="border">
+                           <children>
+                              <Label layoutX="34.0" layoutY="14.0" text="Top trending">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="trendDrinkLabel" layoutX="34.0" layoutY="50.0" text="Trà Thái" />
+                           </children>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <AnchorPane prefHeight="500.0" prefWidth="824.0" style="-fx-background-color: #E2DFDF;">
+                     <children>
+                        <HBox layoutY="9.0" prefHeight="476.0" prefWidth="815.0" spacing="10.0">
+                           <children>
+                              <Pane prefHeight="335.0" prefWidth="397.0" style="-fx-border-style: solid; -fx-background-color: #FFFFFF;" styleClass="border">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="147.0" layoutY="22.0" style="-fx-font-weight: bold; -fx-font-style: italic;" text="Doanh thu">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <LineChart layoutX="26.0" layoutY="129.0" prefHeight="167.0" prefWidth="337.0">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </LineChart>
+                                    <JFXButton fx:id="leftBtn" buttonType="RAISED" layoutX="89.0" layoutY="65.0" prefHeight="39.0" prefWidth="94.0" style="-fx-background-color: #77C975; rax-background-radius: 25;" text="Jan" textFill="WHITE">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="15.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/image/icons/to%20the%20left.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton fx:id="rightBtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="205.0" layoutY="65.0" prefHeight="39.0" prefWidth="94.0" style="-fx-background-color: #77C975; rax-background-radius: 50; -fx-border-radius: 50;" text="Feb" textFill="WHITE">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="13.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/image/icons/totheright.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </Pane>
+                              <VBox prefHeight="335.0" prefWidth="355.0" spacing="10.0" style="-fx-border-style: solid; -fx-background-color: #FFFFFF;" styleClass="border">
+                                 <children>
+                                    <HBox spacing="50.0">
+                                       <children>
+                                          <Label style="-fx-font-weight: bold; -fx-font-style: italic;" text="Lịch sử đơn">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <DatePicker fx:id="datePicker" prefHeight="24.0" prefWidth="142.0" promptText="Ngày" />
+                                       </children>
+                                    </HBox>
+                                    <JFXTreeView fx:id="lichsuTree" showRoot="false" />
+                                    <HBox prefHeight="27.0" prefWidth="310.0" spacing="10.0">
+                                       <children>
+                                          <HBox prefHeight="18.0" prefWidth="84.0" spacing="10.0">
+                                             <children>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9bef9b" height="18.0" stroke="BLACK" strokeType="INSIDE" width="16.0" />
+                                                <Label text="Đã giao" />
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="68.0" spacing="10.0">
+                                             <children>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f3989e" height="18.0" stroke="BLACK" strokeType="INSIDE" width="16.0" />
+                                                <Label text="Hủy" />
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="114.0" layoutY="10.0" prefHeight="18.0" prefWidth="130.0" spacing="10.0">
+                                             <children>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f3f37f" height="18.0" stroke="BLACK" strokeType="INSIDE" width="16.0" />
+                                                <Label prefHeight="16.0" prefWidth="105.0" text="Đang chuẩn bị" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </HBox>
+                     </children></AnchorPane>
+               </children></VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

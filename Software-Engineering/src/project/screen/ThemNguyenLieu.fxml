@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<HBox fx:id="mainAddIngre" prefHeight="670.0" prefWidth="824.0" stylesheets="@../Stylesheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controllers.ThemNguyenLieuController">
+    <children>
+        <VBox prefHeight="600.0" prefWidth="488.0" HBox.hgrow="ALWAYS">
+            <children>
+                <Pane prefHeight="703.0" prefWidth="574.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox prefHeight="703.0" prefWidth="824.0" spacing="30.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="824.0" spacing="200.0">
+                           <children>
+                              <Button fx:id="backBtn" mnemonicParsing="false" onAction="#backBtnOnClicked" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;" text="&lt; Back">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                              </Button>
+                              <Label styleClass="title-text" text="Tạo nguyên liệu mới" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="517.0" prefWidth="835.0">
+                           <children>
+                              <VBox prefHeight="422.0" prefWidth="476.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="normal-text" text="Tên nguyên liệu" wrappingWidth="120.328125">
+                                       <VBox.margin>
+                                          <Insets left="50.0" top="20.0" />
+                                       </VBox.margin></Text>
+                                    <TextField fx:id="tenNguyenLieu" prefHeight="32.0" promptText="Input">
+                                       <VBox.margin>
+                                          <Insets left="50.0" right="200.0" top="5.0" />
+                                       </VBox.margin></TextField>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="normal-text" text="Nhà cung cấp">
+                                       <VBox.margin>
+                                          <Insets left="50.0" top="20.0" />
+                                       </VBox.margin></Text>
+                                    <TextField fx:id="nhaCungCap" prefHeight="32.0" promptText="Input">
+                                       <VBox.margin>
+                                          <Insets left="50.0" right="200.0" top="5.0" />
+                                       </VBox.margin></TextField>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="normal-text" text="Trạng thái">
+                                       <VBox.margin>
+                                          <Insets left="50.0" top="20.0" />
+                                       </VBox.margin></Text>
+                                    <HBox prefHeight="100.0" prefWidth="241.0">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" prefHeight="49.0" prefWidth="142.0" selected="true" styleClass="normal-text" text="Còn hàng">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="status" />
+                                             </toggleGroup>
+                                             <HBox.margin>
+                                                <Insets left="50.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" prefHeight="49.0" prefWidth="143.0" styleClass="normal-text" text="Hết hàng" toggleGroup="$status">
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding></RadioButton>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Pane prefHeight="422.0" prefWidth="302.0">
+                                 <children>
+                                    <Button fx:id="imageBtn" layoutX="70.0" layoutY="14.0" mnemonicParsing="false" onAction="#uploadImageBtn" prefHeight="200.0" prefWidth="200.0">
+                                       <graphic>
+                                          <ImageView fitHeight="86.0" fitWidth="84.0">
+                                             <image>
+                                                <Image url="@../resources/image/icons/upload2.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Text fx:id="uploadTxt" layoutX="124.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upload image">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font></Text>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                        <Pane prefHeight="213.0" prefWidth="904.0">
+                           <children>
+                              <Button layoutX="636.0" layoutY="-7.0" mnemonicParsing="false" onAction="#addNewBtn" prefHeight="43.0" prefWidth="99.0" text="Tạo mới" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </children></Pane>
+            </children>
+        </VBox>
+    </children>
+   <padding>
+      <Insets left="10.0" right="10.0" top="10.0" />
+   </padding>
+</HBox>

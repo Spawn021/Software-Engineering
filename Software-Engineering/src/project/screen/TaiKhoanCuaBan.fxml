@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="mainAccount" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="824.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controllers.TaiKhoanCuaBanController">
+   <children>
+      <VBox layoutX="256.0" layoutY="52.0" prefHeight="685.0" prefWidth="794.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="794.0" spacing="40.0">
+               <children>
+                  <Button fx:id="backBtn" mnemonicParsing="false" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;" text="&lt; Back">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tài khoản của bạn">
+                     <font>
+                        <Font name="Droid Sans Fallback" size="22.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox prefHeight="423.0" prefWidth="805.0">
+               <children>
+                  <VBox prefHeight="372.0" prefWidth="581.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="hovatenLabel" prefHeight="71.0" prefWidth="508.0" text="Ten cua ban" wrapText="true">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="40.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Text fx:id="usernameText" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã nhân viên:  LadyKiller">
+                           <font>
+                              <Font name="Arial" size="20.0" />
+                           </font>
+                        </Text>
+                        <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="384.0">
+                           <children>
+                              <Text lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mật khẩu: *********" wrappingWidth="181.36831665039062">
+                                 <font>
+                                    <Font name="Arial" size="20.0" />
+                                 </font>
+                              </Text>
+                              <PasswordField fx:id="editPassField" prefHeight="24.0" prefWidth="148.0" promptText="Mật khẩu mới" visible="false" />
+                              <Button fx:id="editPassBtn" mnemonicParsing="false" onAction="#editPassPressed" prefHeight="29.0" prefWidth="102.0" style="-fx-background-color: transparent;" styleClass="button-text" stylesheets="@../Stylesheet.css" text="[Sửa]">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Text fx:id="infoText" layoutX="10.0" layoutY="100.0" lineSpacing="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chức vụ: Thu ngân&#10;Ca làm: Sáng&#10;Số giờ đã làm việc trong tháng: 12h">
+                           <font>
+                              <Font name="Arial" size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="10.0" top="40.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <AnchorPane prefHeight="423.0" prefWidth="426.0">
+                     <children>
+                        <Button layoutX="48.0" layoutY="24.0" mnemonicParsing="false" prefHeight="209.0" prefWidth="209.0" style="-fx-background-radius: 150; -fx-background-color: none; -fx-border-color: black; -fx-border-radius: 150;" text="Upload your image" AnchorPane.topAnchor="24.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="40.0" right="10.0" top="40.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

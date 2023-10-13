@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="javafx-swt">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib_window/javafx-swt.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib_window/javafx.base.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib_window/javafx.controls.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib_window/javafx.fxml.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib_window/javafx.graphics.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib_window/javafx.media.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib_window/javafx.swing.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib_window/javafx.web.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib_window/jfoenix-9.0.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib_window/postgresql-42.2.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
